@@ -31,7 +31,7 @@ async def engine_sync(request: Request):
         
         # 2. Route the broken data payload straight to the Anthropic industry gold standard
         message = await client.messages.create(
-            model="claude-sonnet-4-5",
+            model="claude-sonnet-3-5",
             max_tokens=1500,
             messages=[{"role": "user", "content": broken_log_payload}]
         )
